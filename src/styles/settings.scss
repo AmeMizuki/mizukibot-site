@@ -1,0 +1,50 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+// Mizuki-inspired pink color palette
+$mizuki-primary: #DDAACC;
+$mizuki-secondary: #F4D2E7;
+$mizuki-accent: #E8B4CB;
+$mizuki-light: #F9E8F0;
+$mizuki-dark: #C299B8;
+
+// https://vuetifyjs.com/features/sass-variables/
+@forward 'vuetify/settings' with (
+  $color-pack: false
+);
+
+// Additional pink theme variables for custom components
+:root {
+  --mizuki-primary: #{$mizuki-primary};
+  --mizuki-secondary: #{$mizuki-secondary};
+  --mizuki-accent: #{$mizuki-accent};
+  --mizuki-light: #{$mizuki-light};
+  --mizuki-dark: #{$mizuki-dark};
+  
+  // Gradient variations
+  --mizuki-gradient-1: linear-gradient(135deg, #{$mizuki-primary} 0%, #{$mizuki-secondary} 100%);
+  --mizuki-gradient-2: linear-gradient(45deg, #{$mizuki-accent} 0%, #{$mizuki-light} 100%);
+  
+  // Shadow with pink tint
+  --mizuki-shadow: 0 4px 20px rgba(221, 170, 204, 0.3);
+  --mizuki-shadow-hover: 0 8px 30px rgba(221, 170, 204, 0.4);
+}
+
+// Global background styling
+html, body {
+  background-color: var(--mizuki-light) !important;
+}
+
+// Ensure Vuetify application uses the pink background
+.v-application {
+  background: var(--mizuki-light) !important;
+}
+
+// Override any default white backgrounds
+.v-main {
+  background: var(--mizuki-light) !important;
+}
+

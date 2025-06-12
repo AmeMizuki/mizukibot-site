@@ -1,0 +1,101 @@
+// App.vue styles
+.mizuki-background {
+  min-height: 100vh;
+  background: #F9E8F0;
+}
+
+.mizuki-navbar {
+  background: transparent !important;
+  backdrop-filter: blur(10px);
+  border-bottom: none !important;
+}
+
+.logo-section {
+  flex: 0 0 auto;
+  max-width: 120px;
+
+  .logo-link {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .logo-container {
+    position: relative;
+    height: 40px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .logo-png {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+.nav-menu {
+  gap: 8px;
+
+  .nav-item {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    color: rgba(var(--v-theme-on-surface), 0.8);
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: rgb(var(--v-theme-primary));
+      background-color: rgba(var(--v-theme-primary), 0.1);
+    }
+
+    &--active {
+      color: rgb(var(--v-theme-primary));
+      font-weight: 600;
+    }
+  }
+}
+
+.invite-section {
+  flex: 0 0 auto;
+  padding-right: 16px;
+
+  .invite-btn {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// Mobile responsive adjustments
+@media (max-width: 960px) {
+  .logo-section {
+    max-width: 100px;
+
+    .logo-container {
+      height: 36px;
+      width: 100px;
+
+      .logo-png {
+        height: 36px;
+      }
+    }
+  }
+
+  .invite-section {
+    padding-right: 8px;
+  }
+} 
