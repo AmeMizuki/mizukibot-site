@@ -14,7 +14,7 @@ import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/mizuki-profile-site/' : '/',
+  base: './',
   plugins: [
     VueRouter(),
     Layouts(),
